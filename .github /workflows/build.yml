@@ -1,8 +1,19 @@
-include:
-  - board: seeeduino_xiao_ble
-    shield: tibiboard30_left
-    snippet: studio-rpc-usb-uart
-  - board: seeeduino_xiao_ble
-    shield: tibiboard30_right
-     - board: seeeduino_xiao_ble
-    shield: settings_reset
+name: Build ZMK firmware
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build ZMK
+        uses: zmkfirmware/zmk-build-action@v1
+        with:
+          board: seeeduino_xiao_ble
+          shield: tibiboard30_left tibiboard30_right
