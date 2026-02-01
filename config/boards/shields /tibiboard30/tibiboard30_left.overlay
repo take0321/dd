@@ -1,9 +1,7 @@
 
+
 #include "tibiboard30.dtsi"
 
-&kscan {
-    row-gpios =
-        <&gpio0 46 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   /* D9 */
-        <&gpio0 45 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   /* D8 */
-        <&gpio0 44 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  /* D7 */
+&transform {
+    col-offset = <0>;
 };
