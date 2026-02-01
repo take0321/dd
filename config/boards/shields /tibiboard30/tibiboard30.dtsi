@@ -39,7 +39,7 @@
 
     layout: layout {
         compatible = "zmk,physical-layout";
-        display-name = "Tibiboard30";
+        display-name = "tibiboard30";
         transform = <&transform>;
         kscan = <&kscan>;
 
