@@ -1,0 +1,8 @@
+config SHIELD_TIBIBOARD30_LEFT
+    def_bool $(shields_list_contains,Ippo_left)
+
+config SHIELD_TIBIBOARD30_RIGHT
+    def_bool $(shields_list_contains,Ippo_right)
+    
+
+
